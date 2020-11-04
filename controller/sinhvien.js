@@ -6,7 +6,7 @@ var secret = require('../secret/ASW');
 let awsConfig = {
     "region": "us-east-1",
     "endpoint": "http://dynamodb.us-east-1.amazonaws.com",
-   "accessKeyId": "AKIAWE2GK4YDCBMJDLAD", "secretAccessKey":"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",
+    "accessKeyId": secret.aws.AWSAccessKeyId, "secretAccessKey":secret.aws.AWSSecretKey ,
 };
 AWS.config.update(awsConfig);
 let docClient = new AWS.DynamoDB.DocumentClient();
