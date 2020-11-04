@@ -3,8 +3,8 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 var secret = require('./secret/ASW');
 AWS.config.update({
-    accessKeyId: secret.aws.AWSAccessKeyId,
-    secretAccessKey: secret.aws.AWSSecretKey,
+    accessKeyId: AKIAWE2GK4YDCBMJDLAD,
+    secretAccessKey:"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",
     region: 'us-east-1',
     endpoint: "https://s3.amazonaws.com"
 });
@@ -13,7 +13,7 @@ const s0 = new AWS.S3({});
 const upload = multer({
     storage: multerS3({
         s3: s0,
-        bucket: 'baitapcnm',
+        bucket: 'tongthanhlam',
         acl: 'public-read',
         metadata: function(req, file, cb){
             cb(null, {fieldName: file.fieldname});
