@@ -5,7 +5,7 @@ var logger = require('morgan');
 let bodyParser = require('body-parser');
 var _ = require('lodash');
 var app = express();
-const port= 9000;
+const port= 3000;
 app.listen(port, function(){
     console.log('Server listening on  port' + port);
 });
