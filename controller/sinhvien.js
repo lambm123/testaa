@@ -1,12 +1,12 @@
 var AWS = require("aws-sdk");
 var _ = require('lodash');
 var formidable =require('formidable');
-var secret = require('../secret/ASW');
+// var secret = require('../secret/ASW');
 //cai dat dyamodb
 let awsConfig = {
     "region": "us-east-1",
     "endpoint": "http://dynamodb.us-east-1.amazonaws.com",
-    "accessKeyId": secret.aws.AWSAccessKeyId, "secretAccessKey":secret.aws.AWSSecretKey ,
+    "accessKeyId": 'AKIAITPQMQNEQPTOP7CQ', "secretAccessKey":'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'
 };
 AWS.config.update(awsConfig);
 let docClient = new AWS.DynamoDB.DocumentClient();
@@ -27,7 +27,7 @@ module.exports.getAllSinhVien = function (req, res) {
 // get page them sinh vien
 module.exports.getAddSinhVien = function(req, res){
     res.render('add');
-}
+};
 // get page update sinh vien
 module.exports.getUpdateSinhVien = function(req, res){
     let params = {
@@ -47,7 +47,7 @@ module.exports.getUpdateSinhVien = function(req, res){
         }
       });
 
-}
+};
 // them sinh vien
 module.exports.createSinhVien = function (req, res, next) {
     const { ma_sinhvien, ten_sinhvien, namsinh, ma_lop, upload } = req.body;
